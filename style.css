@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+ul {
+  list-style: disc;
+  width: 40%;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+li:hover {
+  color: blue;
+}
+
+#songList {
+    padding-top: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#songTitle {
+    text-align: center;
+    margin: 15px 0;
+    width: 100%;
+    font-size: 24px;
+}
+
+#lyrics {
+    text-align: center;
+    white-space: pre-wrap;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+}
+
+.back-icon {
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+}
+
+.back-icon:active {
+  transform: scale(0.9);
+}
+
+.back-icon:hover {
+  background: #555;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#search {
+  width: 80%;
+  max-width: 350px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  display: block;
+  margin: 0 auto 20px auto;
+  font-size: 16px;
+}
+
+ul#songList {
+    list-style: none;
+    padding: 0; 
+    margin: 0 auto;
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home, #songPage {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}

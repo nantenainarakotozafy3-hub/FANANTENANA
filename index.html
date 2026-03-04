@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8">
+  <title>SAMPANA FANANTENANA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="home">
+
+  <div class="logo-container">
+    <img src="logo.png" class="logo">
+  </div>
+
+  <input type="text" id="search" placeholder="🔎 Tadiavo ny hira...">
+
+  <div class="container">
+    <ul id="songList"></ul>
+  </div>
+
+</div>
+
+
+<div id="songPage" style="display:none;">
+  <div class="logo-container">
+    <img src="logo.png" class="logo">
+  </div>
+
+  <img src="back-icon.jpg" onclick="goBack()" class="back-icon">
+
+  <h2 id="songTitle"></h2>
+  <pre id="lyrics"></pre>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
