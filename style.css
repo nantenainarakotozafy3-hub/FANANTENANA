@@ -39,11 +39,15 @@ li:hover {
   color: blue;
 }
 
-#songList {
-    padding-top: 0; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#songList li {
+    background: white;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-sizing: border-box;
 }
 
 #songTitle {
@@ -126,7 +130,7 @@ ul#songList {
     max-width: 450px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #home, #songPage {
