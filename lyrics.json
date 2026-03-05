@@ -395,6 +395,8 @@
         "Car Tu es Saint, oh Eternel",
         "Haleloia, Haleloia Haleloia, Amen",
         "",
+        "",
+        "--------------------------------------",
         "Car c’est à Toi qu’appartiennent",
         "Le reigne, la puissance et la gloire",
         "Pour des siècles et des siècles",
@@ -485,7 +487,7 @@
         "REF :",
         "Mba avelao, avelao fa tsy sitrak’i Jesosy",
         "Io toaka sotroinao fa manimba ny tenanao",
-        "Tsy ale ove mibanjina ny ho avy ny fiainanao",
+        "Tsy aleo ve mibanjina ny ho avy ny fiainanao",
         "Mba tsy hijaly mandrakizay ny fanahinao",
         "",
         "Ianao zay mbola voafatotra",
@@ -724,7 +726,7 @@
         "REF :",
         "Efa betsaka ny vitanao Tompo ô",
         "Tao amin’ny fiainanay",
-        "Fa mednrika anao ny voninahitra",
+        "Fa mendrika anao ny voninahitra",
         "Satria Mpanjakanay Ianao",
         "",
         "Andiamanitra ô mahery Ianao",
@@ -735,7 +737,7 @@
         "REF :",
         "Efa betsaka ny vitanao Tompo ô",
         "Tao amin’ny fiainanay",
-        "Fa mednrika anao ny voninahitra",
+        "Fa mendrika anao ny voninahitra",
         "Satria Mpanjakanay Ianao"
       ]
     },
@@ -937,13 +939,13 @@
         "Narotsakao ho anay",
         "Misandrata Ianao ry Avo indrindra ô!",
         "Ny fahatsaranao no mameno anay",
-        "Mandrava ny toloko manasitrna ny areiko",
+        "Mandrava ny toloko, manasitrana ny aretiko",
         "Ny mihira hira fiderana",
         "",
         "REF :",
         "Tiako tena tiako ny midera Anao",
         "Tiako tena tiko ny mankalaza Anao",
-        "Tiako tena tiako ny midra Anao ry Ray",
+        "Tiako tena tiako ny midera Anao ry Ray",
         "Satria tena tsara indrindra Ianao"
       ]
     },
@@ -1357,3 +1359,4 @@
     }
   ]
 }
+
