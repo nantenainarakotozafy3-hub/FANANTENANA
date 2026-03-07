@@ -39,6 +39,13 @@ function goBack() {
   document.getElementById("home").style.display = "block";
 }
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log("Service Worker tafiditra!"))
+      .catch(err => console.log("Olana SW:", err));
+  });
+}
 
 document.getElementById("search").addEventListener("input", function() {
   const value = this.value.toLowerCase();
