@@ -24,19 +24,50 @@ function displaySongs(list) {
 }
 
 function openSong(song) {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("songPage").style.display = "block";
+    document.getElementById("home").style.display = "none";
+    document.getElementById("songPage").style.display = "block";
+    document.getElementById("songTitle").textContent = song.title;
+    document.getElementById("lyrics").textContent = song.lyrics.join("\n");
 
-  document.getElementById("songTitle").textContent = song.title;
+    const audioSource = document.getElementById("audioSource");
+    const player = document.getElementById("audioPlayer");
 
-  document.getElementById("lyrics").textContent = song.lyrics.join("\n");
+    if (song.audio) {
+        audioSource.src = "audio/" + song.audio;
+        player.load();
+    }
+    window.scrollTo(0, 0);
+}
+
+function togglePlay() {
+    const player = document.getElementById("audioPlayer");
+    const icon = document.getElementById("playPauseIcon");
+
+    if (player.paused) {
+        player.play();
   
-  window.scrollTo(0, 0);
+        icon.src = "pause.png"; 
+    } else {
+        player.pause();
+
+        icon.src = "play.png";
+    }
+}
+
+function stopAudio() {
+    const player = document.getElementById("audioPlayer");
+    const icon = document.getElementById("playPauseIcon");
+
+    player.pause();
+    player.currentTime = 0;
+
+    icon.src = "play.png";
 }
 
 function goBack() {
-  document.getElementById("songPage").style.display = "none";
-  document.getElementById("home").style.display = "block";
+    document.getElementById("home").style.display = "block";
+    document.getElementById("songPage").style.display = "none";
+    stopAudio();
 }
 
 if ('serviceWorker' in navigator) {
@@ -54,3 +85,4 @@ document.getElementById("search").addEventListener("input", function() {
   );
   displaySongs(filtered);
 });
+
