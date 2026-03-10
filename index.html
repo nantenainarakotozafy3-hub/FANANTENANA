@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="mg">
 <head>
-  <meta charset="UTF-8">
-  <title>SAMPANA FANANTENANA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>SAMPANA FANANTENANA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-<div id="home">
+    <div id="home">
+        <div class="logo-container">
+            <img src="logo.png" class="logo" alt="Logo">
+        </div>
 
-  <div class="logo-container">
-    <img src="logo.png" class="logo">
-  </div>
+        <input type="text" id="search" placeholder="🔎 Tadiavo ny hira...">
 
-  <input type="text" id="search" placeholder="🔎 Tadiavo ny hira...">
+        <div class="container">
+            <ul id="songList"></ul>
+        </div>
+    </div>
 
-  <div class="container">
-    <ul id="songList"></ul>
-  </div>
+    <div id="songPage" style="display:none;">
+        <div class="logo-container">
+            <img src="logo.png" class="logo" alt="Logo">
+        </div>
 
-</div>
+        <img src="back-icon.png" onclick="goBack()" class="back-icon" alt="Miverina">
 
+        <h2 id="songTitle"></h2>
+        
+        <pre id="lyrics" style="white-space: pre-wrap; word-wrap: break-word;"></pre>
 
-<div id="songPage" style="display:none;">
-  <div class="logo-container">
-    <img src="logo.png" class="logo">
-  </div>
+        <div class="mini-player">
+            <audio id="audioPlayer">
+                <source id="audioSource" src="" type="audio/mpeg">
+            </audio>
 
-  <img src="back-icon.png" onclick="goBack()" class="back-icon">
+            <div class="player-controls">
+                <button onclick="togglePlay()" class="btn-icon">
+                    <img id="playPauseIcon" src="play.png" alt="Play/Pause" width="50">
+                </button>
 
-  <h2 id="songTitle"></h2>
-  <pre id="lyrics"></pre>
-</div>
+                <button onclick="stopAudio()" class="btn-icon">
+                    <img src="stop.png" alt="Stop" width="60">
+                </button>
+            </div>
+        </div>
+    </div>
 
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
