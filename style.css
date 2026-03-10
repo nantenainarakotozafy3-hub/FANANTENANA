@@ -93,14 +93,19 @@ li:hover {
     top: 15px;
     left: 15px;
     z-index: 10;
-}
-
-.back-icon:active {
-  transform: scale(0.9);
+    background: none !important; 
+    border: none;
+    outline: none;
+    transition: transform 0.1s ease;
 }
 
 .back-icon:hover {
-  background: #555;
+    background: none !important;
+    opacity: 0.7;}
+
+.back-icon:active {
+    transform: scale(0.9);
+    background: none !important;
 }
 
 pre {
@@ -139,4 +144,57 @@ ul#songList {
     margin: 0 auto;
     padding: 20px 0;
     position: relative;
+}
+
+.mini-player {
+    margin-top: 25px;
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+    border-radius: 12px;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-audio {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #2c3e50;
+    color: white;
+    min-width: 120px;
+    transition: 0.2s;
+}
+
+.btn-audio:active {
+    background-color: #1a252f;
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon img {
+    height: 50px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+#playPauseIcon {
+    width: 50px;
+    padding: 5px;
 }
