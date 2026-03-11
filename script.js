@@ -71,11 +71,18 @@ function goBack() {
 }
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(() => console.log("Service Worker tafiditra!"))
-      .catch(err => console.log("Olana SW:", err));
-  });
+    navigator.serviceWorker.register('sw.js').then(reg => {
+        reg.onupdatefound = () => {
+            const installingWorker = reg.installing;
+            installingWorker.onstatechange = () => {
+                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    if (confirm("Misy fanavaozana vaovao (New update). Te hamelona ny pejy ve ianao?")) {
+                        window.location.reload();
+                    }
+                }
+            };
+        };
+    });
 }
 
 document.getElementById("search").addEventListener("input", function() {
@@ -85,4 +92,5 @@ document.getElementById("search").addEventListener("input", function() {
   );
   displaySongs(filtered);
 });
+
 
