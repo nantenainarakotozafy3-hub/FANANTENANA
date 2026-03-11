@@ -189,13 +189,15 @@ ul#songList {
 }
 
 .btn-icon img {
-    min-width: 50px;
-    min-height: 50px;
-    display: block !important;
+    width: 55px !important;
+    height: auto;
+    display: inline-block !important; 
+    visibility: visible !important;
 }
 
 #playPauseIcon {
     width: 50px;
     padding: 5px;
 }
+
 
