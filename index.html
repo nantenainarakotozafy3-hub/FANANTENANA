@@ -2,56 +2,55 @@
 <html lang="mg">
 <head>
     <meta charset="UTF-8">
-    <title>SAMPANA FANANTENANA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPANA FANANTENANA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
     <div id="home">
-        <div class="logo-container">
-            <img src="logo.png" class="logo" alt="Logo">
-        </div>
+        <header class="logo-container">
+            <img src="logo.png" class="logo-home" alt="Logo Sampana">
+        </header>
 
-        <input type="text" id="search" placeholder="🔎 Tadiavo ny hira...">
+        <section class="search-section">
+            <input type="text" id="search" placeholder="🔎 Tadiavo ny hira...">
+        </section>
 
-        <div class="container">
+        <main class="container">
             <ul id="songList"></ul>
-        </div>
+        </main>
     </div>
 
     <div id="songPage" style="display:none;">
-        <div class="logo-container">
-            <img src="logo.png" class="logo" alt="Logo">
-        </div>
+        <header class="fixed-header">
+            <img src="back-icon.png" onclick="goBack()" class="back-icon" alt="Miverina">
+            
+            <div class="header-content">
+                <img src="logo.png" class="logo-mini" alt="Logo">
+                
+                <div class="mini-player">
+                    <audio id="audioPlayer"></audio>
+                    <div class="player-controls">
+                        <button onclick="togglePlay()" class="btn-icon">
+                            <img id="playPauseIcon" src="play.png" alt="Play">
+                        </button>
+                        <button onclick="stopAudio()" class="btn-icon">
+                            <img src="stop.png" alt="Stop">
+                        </button>
+                    </div>
+                </div>
 
-        <img src="back-icon.png" onclick="goBack()" class="back-icon" alt="Miverina">
-
-        <h2 id="songTitle"></h2>
-        
-        <pre id="lyrics" style="white-space: pre-wrap; word-wrap: break-word;"></pre>
-
-        <div class="mini-player">
-            <audio id="audioPlayer">
-                <source id="audioSource" src="" type="audio/mpeg">
-            </audio>
-
-            <div class="player-controls">
-                <button onclick="togglePlay()" class="btn-icon">
-                <img id="playPauseIcon" src="play.png" alt="Play/Pause" width="50">
-                </button>
-
-                <button onclick="stopAudio()" class="btn-icon">
-                <img src="stop.png" alt="Stop" width="60">
-                </button>
+                <h2 id="songTitle"></h2>
             </div>
-        </div>
+        </header>
+
+        <article class="lyrics-container">
+            <div id="lyrics"></div>
+        </article>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
