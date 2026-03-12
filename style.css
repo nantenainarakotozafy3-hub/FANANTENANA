@@ -30,19 +30,39 @@ body {
 }
 
 #songList {
-    list-style: none;
-    padding: 0;
-    width: 90%;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
 }
 
 #songList li {
-    background: white;
-    margin-bottom: 8px;
-    padding: 15px;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    width: max-content;
+    min-width: 90%;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#songList li::before {
+    content: "🎵";
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+#songList li:active {
+    transform: scale(0.98);
 }
 
 .fixed-header {
@@ -55,14 +75,6 @@ body {
     border-bottom: 1px solid #eee;
     padding: 10px 0;
     text-align: center;
-}
-
-.back-icon {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    width: 35px;
-    cursor: pointer;
 }
 
 .logo-mini {
@@ -78,9 +90,14 @@ body {
     margin: 5px 0;
 }
 
-.btn-icon {
+.back-icon {
     background: transparent;
     border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 35px;
     cursor: pointer;
 }
 
