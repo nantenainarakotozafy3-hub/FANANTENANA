@@ -1,4 +1,4 @@
-const cacheName = 'hira-fanantenana-v6';
+const cacheName = 'hira-fanantenana-v7';
 const assets = [
   './',
   './index.html',
@@ -46,3 +46,4 @@ self.addEventListener('fetch', e => {
     })
   );
 });
+
