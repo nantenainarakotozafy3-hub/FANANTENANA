@@ -35,7 +35,8 @@
         "",
         "Réf :",
         "Tsy mendrika aho, tsy mendrika ny fahasoavanao",
-        "Tsy mendrika aho, nafoinao ny fiandriananao noho ny fitiavanao ahy",
+        "Tsy mendrika aho, nafoinao ny fiandriananao",
+        "noho ny fitiavanao ahy",
         "Tsy mendrika aho, very tao anatin’ny otako aho",
         "Soa fa nisy ny hazofijaliana",
         "Namonjenao olom-bery toa ahy",
@@ -485,32 +486,6 @@
       "audio": "Moa ve mba fantatrao.mp3"
     },
     {
-      "title": "MANGEJA KA IALAO",
-      "lyrics": [
-        "Raha mandinika ny fiainana amndalo ety",
-        "Tena maro koa ireo voaeja azy",
-        "Na ny antitra sy ny tanora manara-po tsy mba misaina",
-        "Ny fiafaran’ny fanahiny",
-        "Mba jereo kely ange ny tenanao ity",
-        "Fa tena mampalahelo sy mijaly",
-        "Vokatry ny zavamahadomelina ka ny tokantrano rava",
-        "Simba ny fifandraisan’ny ankohonana",
-        "",
-        "REF :",
-        "Mba avelao, avelao fa tsy sitrak’i Jesosy",
-        "Io toaka sotroinao fa manimba ny tenanao",
-        "Tsy ale ove mibanjina ny ho avy ny fiainanao",
-        "Mba tsy hijaly mandrakizay ny fanahinao",
-        "",
-        "Ianao zay mbola voafatotra",
-        "Izy irery ihany ‘ilay tokana mpanafaka",
-        "Matokia fa hainy manadio",
-        "Ny tenanao voageja anio",
-        "Ka mila manana finoana"
-      ],
-      "audio": "Mangeja ka ialao.mp3"
-    },
-    {
       "title": "TSY ANENENANAO",
       "lyrics": [
         "Tsy anenenanao ny miaraka amin’i Jesoa",
@@ -574,33 +549,6 @@
         "Hionona amin’izay voasoritrao"
       ],
       "audio": "Izay voasoritrao.mp3"
-    },
-    {
-      "title": "MITSANGANA",
-      "lyrics": [
-        "Mitsangàna, torio ny fitiavana",
-        "Zay nomen’ Andriamanitra Tsitoha",
-        "Azontsika ny fahasoavana",
-        "Sy ny fahasambarana avy amin’i Jesoa",
-        "Ny fatorana rehetra hovahana ‘zao",
-        "F ‘efa tonga ny taom-panafahana",
-        "Mitsangàna torio ny fiadanana",
-        "Ho an’ny olona ankasitrahana",
-        "",
-        "Indro izao Jeso Tompo",
-        "Nandao ny lanitra mba hitondra ny fahazavana",
-        "Eny Izy tokoa ‘Lay Mesia Mpanavotra",
-        "Ka mitondra ny fiadanana",
-        "",
-        "Atolory ho Azy anio",
-        "Saotra dera voninahitra",
-        "Raiso Tompo izao fiderana izao",
-        "Tompo masina ô ekeo raha sitrakao",
-        "Ho Anao Tompo ô ny fisaoranay",
-        "Voninahitra anie ho Anao ry Ray",
-        "Masina ! Masina !"
-      ],
-      "audio": "Mitsangana.mp3"
     },
     {
       "title": "TOKIKO IANAO",
@@ -871,7 +819,7 @@
         "Tokin’ny fo izay tsy mba mandao",
         "Jeso"
       ],
-      "audio": "Jeso no tokiko.mp3"
+      "audio": "Jesoa no tokiko.mp3"
     },
     {
       "title": "MANIRY AHO",
@@ -892,120 +840,6 @@
         "Ekeo Jeso, raiso aho ho Anao"
       ],
       "audio": "Maniry aho.mp3"
-    },
-    {
-      "title": "MILA ANAO RAY",
-      "lyrics": [
-        "Iô iô iô iô iô iô",
-        "",
-        "O ry Tomponay mahery miandrandra Anao izahay",
-        "Mila Anao Ray mba hijery k’aza avela hangahiahy",
-        "Tsy natao ho doria, vovontany sy fofonaina",
-        "O ry Ray mba mitahia ireto ondr mitaraina",
-        "",
-        "",
-        "REF :",
-        "Reraky ny ady mafy ny vahoaka Malagasy",
-        "Mila vonjy mila antra",
-        "Mila tsaboina ireo naratra",
-        "Na dia maro aza izahay",
-        "Ny fianakaviana dia ho iray",
-        "Ilay fitiavanao ihany no hampiray amin’izany",
-        "",
-        "",
-        "Haizim-pitom-pahotana no mandrakotra ny dia",
-        "Mila Anao Ray hampisava hampiposaka mazava",
-        "Tendrombohitra sy havoana lohasaha sy ranon’ala",
-        "Zary asatananao mba vonjeo i Gasikara",
-        "",
-        "",
-        "REF :",
-        "Reraky ny ady mafy ny vahoaka Malagasy",
-        "Mila vonjy mila antra",
-        "Mila tsaboina ireo naratra",
-        "Na dia maro aza izahay",
-        "Ny fianakaviana dia ho iray",
-        "Ilay fitiavanao ihany no hampiray amin’izany",
-        "",
-        "",
-        "Resy lahatra izahay fa Ianao no mpitsabo",
-        "Kinga saina ary koa mahay",
-        "Hampitraka ireo lavo",
-        "Ianao no dokotera hampisonga ny toe-karena",
-        "Ary koa Ainjeniera Toky ho an’ny Firenena",
-        "",
-        "REF :",
-        "Reraky ny ady mafy ny vahoaka Malagasy",
-        "Mila vonjy mila antra",
-        "Mila tsaboina ireo naratra",
-        "Na dia maro aza izahay",
-        "Ny fianakaviana dia ho iray",
-        "Ilay fitiavanao ihany no hampiray amin’izany"
-      ],
-      "audio": "Mila Anao Ray.mp3"
-    },
-    {
-      "title": "HIDERA ANAO",
-      "lyrics" :[
-        "Haleloia Halleloia ooooo",
-        "",
-        "Hidera aho raha mbola miaina koa",
-        "Hihira ny Anaranao ry Ray",
-        "Satria efa nomenao famindrampo avy Aminao",
-        "Nomenao mba ho anay",
-        "Ny fiderana no mandroaka an’i satana",
-        "sy mamelombelona ny fanahintsika",
-        "Mampitombo ny finoana ary manasitrana",
-        "Ny herin’ny hira fiderana",
-        "",
-        "Hidera aho ry Tsara indrindra ô!",
-        "Sy hihoby ny Anaranao ‘zahay",
-        "Satria efa nomenao ilay fitahiana avy Aminao",
-        "Narotsakao ho anay",
-        "Misandrata Ianao ry Avo indrindra ô!",
-        "Ny fahatsaranao no mameno anay",
-        "Mandrava ny toloko manasitrna ny areiko",
-        "Ny mihira hira fiderana",
-        "",
-        "REF :",
-        "Tiako tena tiako ny midera Anao",
-        "Tiako tena tiko ny mankalaza Anao",
-        "Tiako tena tiako ny midra Anao ry Ray",
-        "Satria tena tsara indrindra Ianao"
-      ],
-      "audio": "Hidera Anao.mp3"
-    },
-    {
-      "title": "FITIAVAN’I JESOSY",
-      "lyrics": [
-        "Jesosy ô, tiako loatra Ianao",
-        "Satria nanehoanao ny fitivanao",
-        "Nofafganao ny ranomasoko",
-        "Nampitonianao ny alaheloko",
-        "Tsy navelanao irery aho",
-        "Fa te anilako Ianao",
-        "Tiako Ianao, tena tiako Ianao",
-        "",
-        "Jesosy ô, mamiko loatra ianao",
-        "Satria nosokafana ny lalako",
-        "Nampitrakànao ny lohako",
-        "Ary nampahitanao ny voninahitrao",
-        "Ary nampitonianao ny foko",
-        "Ary Ianao no lasa tokiko",
-        "Mamiko Ianao, tena mamiko Ianao",
-        "Ka misaotra eee…….",
-        "",
-        "REF :",
-        "Ka misaotra Anao aho Tompo",
-        "Fa tsara loatra Ianao",
-        "Mahatsiaro sambatra ny fiinako",
-        "Manana Anao hitarainako",
-        "Na mafy aza ny adiko",
-        "Dia hanompo Anao hatrany no voadiko",
-        "Ny ho kivy sanatria",
-        "Fa ny fiainako efa an’i Kristy"
-      ],
-      "audio": "Fitiavan'i Jesosy.mp3"
     },
     {
       "title": "FA MITOVY",
@@ -1072,10 +906,10 @@
         "REF :",
         "Aza variana sao taraiky ianao",
         "Aza sondriana variana amin’ity fiainana ity",
-        "Tsy aleo ve ianao manomana ny ho avinao",
+        "Tsy aleo ve ianao manomana ny hoavinao",
         "Mba andraisanao ilay paradisa soa"
       ],
-      "audio": "Efa akaiky Izy.wav"
+      "audio": "Efa akaiky Izy.mp3"
     },
     {
       "title": "FIDERANA",
@@ -1107,70 +941,7 @@
         "Dera sy laza no indro atolotray",
         "Fa mendrika ho Anao izany"
       ],
-      "audio": "Fiderana.wav"
-    },
-    {
-      "title": "FALY IZAHAY",
-      "lyrics": [
-        "Faly izahay izao, feno haravoana",
-        "Tena faly izahay izao feno haravoana",
-        "Ry Andriamanitray ô noho ny famindram-ponao",
-        "Fa namaky andro sarotra, taona maro lasa izany",
-        "Ny voafidinao ho irakao eto an-tanimbolinao",
-        "Nefa tsy navelanao ho lao",
-        "Ireo mpanompo tia Anao",
-        "Notafianao hery lehibe",
-        "Vitany ny didinao",
-        "",
-        "",
-        "(Eny) Moa tsy olon-tsambatra",
-        "Izahay ry Tompo ô",
-        "Tonga ny fahazavana",
-        "Henika ny tenanay",
-        "Izahay mpanota mafy fo",
-        "Dia nampibebahinao",
-        "Ka natsanganao ho zanakao",
-        "Hiray aina Aminao",
-        "Ny Anaranao isaoranay",
-        "O ry Telo ‘zay Izay",
-        "Fa tafiditra ‘ndray izahay",
-        "Mba ho ankohonanao",
-        "",
-        "",
-        "(Ray ô) Toky ‘zao no omenay",
-        "Mba hanao ny asanao",
-        "Hampandroso hatrany",
-        "Eto ny Fanjakanao",
-        "Kely hery anefa izahay",
-        "Koa mba hampiionao",
-        "Ampianaro mba hifankatia",
-        "Fa efa namindranao fo",
-        "Ny fitiavanao omeo anay",
-        "Mba hiraisanay tokoa",
-        "Hiarahanay rahatrizay",
-        "Ao an-danitra Aminao"
-      ],
-      "audio": "Faly izahay.mp3"
-    },
-    {
-      "title": "VONONA AHO",
-      "lyrics": [
-        "Hitsangana aho ry Tompoko",
-        "Handresy izao tontolo izao",
-        "Eny tsy ho menatra aho fa anilanao",
-        "Zay fahavalo ho tantiko",
-        "",
-        "Fantatro tsara ny diako",
-        "Ratra sy loza no miandry ahy",
-        "Eny ekeko izany fa Ianao",
-        "No andriko ka handroso aho",
-        "",
-        "Vonona aho ho tafikao",
-        "Finoana re no ampingako",
-        "Ka fanantenana sy fitiavana",
-        "Ireo no fanoitra ‘zay hanainga ahy"
-      ],
-      "audio": "Vonona aho.mp3"
+      "audio": "Fiderana.mp3"
     },
     {
       "title": "MIVERENA",
@@ -1213,38 +984,7 @@
         "Miverena izao ilaozy ny otanao ario ny ditranao",
         "Raisonao ny famonjena izay atolony ho anao"
       ],
-      "audio": "Miverena.mp3"
-    },
-    {
-      "title": "TOKIKO JESOA",
-      "lyrics": [
-        "Iza no mbola azo andrandraina",
-        "Raha ny hakiviana izay manjo",
-        "Mafy ka manery hitaraina",
-        "Ary mila hampamoy fo",
-        "Ianao oirery efa sorona Tompo",
-        "No tsy mba mety mandà",
-        "Iantorahako hanome tokoa fiadanam-po",
-        "Tokiko Jesoa",
-        "",
-        "",
-        "Ianao no mendrika hoderaina",
-        "Raha faly ravo ‘zany fo",
-        "Voninahitra haja ary aina avy Aminao avokoa",
-        "Jesoa Tompo ‘Zay Loharanontsoa",
-        "Hany mendrika hanandratana",
-        "Hira fiderana fisaorana saotra eram-po",
-        "Jesoa Tokiko",
-        "",
-        "",
-        "Ao ny enjika izay mitady",
-        "Ny handrava ny finoana Anao",
-        "Ny fakam-panahy ‘zay miady hampanjaka izao tontolo izao",
-        "Kristy manan-kery mba handresy ny fakam-panahy",
-        "N’inona manjo ory faly koa",
-        "Tokiko Jesoa, eny inoako"
-      ],
-      "audio": "Tokiko Jesoa.mp3"
+      "audio": "Miverena ianao.mp3"
     },
     {
       "title": "AMPAHEREZO NY FOKO",
@@ -1397,4 +1137,5 @@
     }
   ]
 }
+
 
