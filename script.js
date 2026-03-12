@@ -37,7 +37,7 @@ function openSong(song) {
 };
 
     if (song.audio) {
-        player.src = "audio/" + song.audio;
+        player.src = "AUDIO/" + song.audio;
         player.load();
         icon.src = "play.png";
     } else {
@@ -91,3 +91,4 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.log("Olana SW:", err));
   });
 }
+
