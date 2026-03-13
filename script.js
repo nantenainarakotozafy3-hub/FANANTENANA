@@ -18,9 +18,9 @@ function displaySongs(list) {
     const li = document.createElement("li");
     li.className = "song-item";
     li.innerHTML = `
-        <img src="logo.png" class="song-icon-list" alt="icon">
-        <span class="song-name">${song.title}</span>
-    `;
+    <span class="music-emoji">🎵</span>
+    <span class="song-name">${song.title}</span>
+`;
     li.onclick = () => openSong(song);
     songList.appendChild(li);
   });
@@ -30,23 +30,19 @@ function openSong(song) {
     document.getElementById("home").style.display = "none";
     document.getElementById("songPage").style.display = "block";
     document.getElementById("songTitle").textContent = song.title;
-    
     document.getElementById("lyrics").innerText = song.lyrics.join("\n");
 
     const player = document.getElementById("audioPlayer");
     const icon = document.getElementById("playPauseIcon");
 
-    player.onended = function() {
-        icon.src = "play.png";
-    };
-
     if (song.audio) {
         player.src = "AUDIO/" + song.audio; 
         player.load();
-        icon.src = "play.png";
     } else {
         player.src = "";
     }
+    
+    icon.src = "play.png";
     window.scrollTo(0, 0);
 }
 
@@ -54,14 +50,39 @@ function togglePlay() {
     const player = document.getElementById("audioPlayer");
     const icon = document.getElementById("playPauseIcon");
 
-    if (!player.src || player.src.endsWith("/")) return;
+    if (!player) {
+        alert("Tsy hita ny audioPlayer ao amin'ny HTML!");
+        return;
+    }
+
+
+    if (!player.src || player.src.includes("undefined") || player.src === window.location.href) {
+        alert("Mbola tsy nisy hira nampidirina!");
+        return;
+    }
 
     if (player.paused) {
-        player.play();
-        icon.src = "pause.png"; 
-    } 
-    else {
+        player.play()
+            .then(() => {
+                icon.src = "pause.png";
+                console.log("Mandeha ny hira...");
+            })
+            .catch(err => {
+                alert("Tsy afaka mandefa ny hira: " + err.message);
+            });
+    } else {
         player.pause();
+        icon.src = "play.png";
+    }
+}
+
+function stopAudio() {
+    const player = document.getElementById("audioPlayer");
+    const icon = document.getElementById("playPauseIcon");
+
+    if (player) {
+        player.pause();
+        player.currentTime = 0;
         icon.src = "play.png";
     }
 }
