@@ -25,29 +25,31 @@
 
     <div id="songPage" style="display:none;">
         <header class="fixed-header">
-            <img src="back-icon.png" onclick="goBack()" class="back-icon" alt="Miverina">
-            
-            <div class="header-content">
-                <img src="logo.png" class="logo-mini" alt="Logo">
-                
-                <div class="mini-player">
-                    <audio id="audioPlayer"></audio>
-                    <div class="player-controls">
-                        <button onclick="togglePlay()" class="btn-icon">
-                            <img id="playPauseIcon" src="play.png" alt="Play">
-                        </button>
-                        <button onclick="stopAudio()" class="btn-icon">
-                            <img src="stop.png" alt="Stop">
-                        </button>
-                    </div>
-                </div>
+            <div class="header-top-row">
+                <img src="back-icon.png" onclick="goBack()" class="back-icon" alt="Miverina">
+            </div>
 
+                 <img src="logo.png" class="logo-mini" alt="Logo">
+
+             <div class="mini-player">
+                <audio id="audioPlayer"></audio> 
+
+                <button onclick="togglePlay()" class="btn-icon">
+                    <img id="playPauseIcon" src="play.png" alt="Play">
+                </button>
+                
+                <button onclick="stopAudio()" class="btn-icon">
+                    <img src="stop.png" alt="Stop">
+                </button>
+            </div>
+
+            <div class="title-container">
                 <h2 id="songTitle" class="header-title"></h2>
             </div>
         </header>
 
         <article class="lyrics-container">
-            <div id="lyrics"></div>
+        <div id="lyrics" style="text-align: center; font-size: 20px; line-height: 1.8;"></div>
         </article>
     </div>
 
