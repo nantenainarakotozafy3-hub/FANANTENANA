@@ -1,4 +1,4 @@
-const cacheName = 'hira-fanantenana-v8';
+const cacheName = 'hira-fanantenana-v9';
 const assets = [
   './',
   './index.html',
@@ -31,20 +31,9 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  const url = new URL(e.request.url);
-
-  if (url.pathname.endsWith('.mp3')) {
-    e.respondWith(
-      fetch(e.request).catch(() => caches.match(e.request))
-    );
-    return;
-  }
-
   e.respondWith(
     caches.match(e.request).then(response => {
       return response || fetch(e.request);
     })
   );
 });
-
-
