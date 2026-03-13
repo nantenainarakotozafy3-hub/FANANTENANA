@@ -33,10 +33,9 @@
         "Na mivadika aza aho mbola saininao ihany",
         "Na mivoaka ny vala ampodianao hatrany",
         "",
-        "Réf :",
+        "Ref :",
         "Tsy mendrika aho, tsy mendrika ny fahasoavanao",
-        "Tsy mendrika aho, nafoinao ny fiandriananao",
-        "noho ny fitiavanao ahy",
+        "Tsy mendrika aho, nafoinao ny fiandriananao noho ny fitiavanao ahy",
         "Tsy mendrika aho, very tao anatin’ny otako aho",
         "Soa fa nisy ny hazofijaliana",
         "Namonjenao olom-bery toa ahy",
@@ -407,6 +406,9 @@
         "Car Tu es Saint, oh Eternel",
         "Haleloia, Haleloia Haleloia, Amen",
         "",
+        "",
+        "",
+        "",
         "Car c’est à Toi qu’appartiennent",
         "Le reigne, la puissance et la gloire",
         "Pour des siècles et des siècles",
@@ -424,7 +426,7 @@
         "",
         "Vahona sy kapoaka mangidy",
         "Moa hifarana anio ve ny dia ?",
-        "Sa izah ono tsy nahay nifidy ?",
+        "Sa izaho no tsy nahay nifidy ?",
         "Rahoviana vao ho tody ary ?",
         "",
         "REF :",
@@ -693,7 +695,7 @@
         "REF :",
         "Efa betsaka ny vitanao Tompo ô",
         "Tao amin’ny fiainanay",
-        "Fa mednrika anao ny voninahitra",
+        "Fa mendrika anao ny voninahitra",
         "Satria Mpanjakanay Ianao",
         "",
         "Andiamanitra ô mahery Ianao",
@@ -704,10 +706,10 @@
         "REF :",
         "Efa betsaka ny vitanao Tompo ô",
         "Tao amin’ny fiainanay",
-        "Fa mednrika anao ny voninahitra",
+        "Fa mendrika anao ny voninahitra",
         "Satria Mpanjakanay Ianao"
       ],
-      "audio": "Fa mendrika.MP3"
+      "audio": "Fa mendrika.mp3"
     },
     {
       "title": "MISAOTRA ANAO",
@@ -819,7 +821,7 @@
         "Tokin’ny fo izay tsy mba mandao",
         "Jeso"
       ],
-      "audio": "Jesoa no tokiko.mp3"
+      "audio": "Jeso no tokiko.mp3"
     },
     {
       "title": "MANIRY AHO",
@@ -906,7 +908,7 @@
         "REF :",
         "Aza variana sao taraiky ianao",
         "Aza sondriana variana amin’ity fiainana ity",
-        "Tsy aleo ve ianao manomana ny hoavinao",
+        "Tsy aleo ve ianao manomana ny ho avinao",
         "Mba andraisanao ilay paradisa soa"
       ],
       "audio": "Efa akaiky Izy.mp3"
@@ -984,7 +986,7 @@
         "Miverena izao ilaozy ny otanao ario ny ditranao",
         "Raisonao ny famonjena izay atolony ho anao"
       ],
-      "audio": "Miverena ianao.mp3"
+      "audio": "Miverena.mp3"
     },
     {
       "title": "AMPAHEREZO NY FOKO",
@@ -1137,6 +1139,3 @@
     }
   ]
 }
-
-
-
