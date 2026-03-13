@@ -25,22 +25,20 @@
 
     <div id="songPage" style="display:none;">
         <header class="fixed-header">
-            <div class="header-top-row">
+            <div class="header-controls-row">
                 <img src="back-icon.png" onclick="goBack()" class="back-icon" alt="Miverina">
+
+            <div class="mini-player">
+                <audio id="audioPlayer"></audio>
+            <button onclick="togglePlay()" class="btn-icon">
+                <img id="playPauseIcon" src="play.png" alt="Play">
+            </button>
+            <button onclick="stopAudio()" class="btn-icon">
+                <img src="stop.png" alt="Stop">
+            </button>
             </div>
-
-                 <img src="logo.png" class="logo-mini" alt="Logo">
-
-             <div class="mini-player">
-                <audio id="audioPlayer"></audio> 
-
-                <button onclick="togglePlay()" class="btn-icon">
-                    <img id="playPauseIcon" src="play.png" alt="Play">
-                </button>
-                
-                <button onclick="stopAudio()" class="btn-icon">
-                    <img src="stop.png" alt="Stop">
-                </button>
+        
+             <div style="width: 55px;"></div>
             </div>
 
             <div class="title-container">
