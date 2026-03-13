@@ -16,7 +16,11 @@ function displaySongs(list) {
 
   list.forEach((song) => {
     const li = document.createElement("li");
-    li.textContent = song.title;
+    li.className = "song-item";
+    li.innerHTML = `
+        <img src="logo.png" class="song-icon-list" alt="icon">
+        <span class="song-name">${song.title}</span>
+    `;
     li.onclick = () => openSong(song);
     songList.appendChild(li);
   });
@@ -32,12 +36,12 @@ function openSong(song) {
     const player = document.getElementById("audioPlayer");
     const icon = document.getElementById("playPauseIcon");
 
-    document.getElementById("audioPlayer").onended = function() {
-      document.getElementById("playPauseIcon").src = "play.png";
-};
+    player.onended = function() {
+        icon.src = "play.png";
+    };
 
     if (song.audio) {
-        player.src = "audio/" + song.audio;
+        player.src = "AUDIO/" + song.audio; 
         player.load();
         icon.src = "play.png";
     } else {
@@ -55,7 +59,8 @@ function togglePlay() {
     if (player.paused) {
         player.play();
         icon.src = "pause.png"; 
-    } else {
+    } 
+    else {
         player.pause();
         icon.src = "play.png";
     }
