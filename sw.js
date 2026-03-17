@@ -1,4 +1,4 @@
-const cacheName = 'hira-fanantenana-v42';
+const cacheName = 'hira-fanantenana-v50';
 const assets = [
   './',
   './index.html',
@@ -8,7 +8,7 @@ const assets = [
   './logo.png',
   './play.png',
   './pause.png',
-  './back-icon.png',
+  './home.png',
   './manifest.json'
 ];
 
