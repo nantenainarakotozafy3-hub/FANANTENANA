@@ -123,8 +123,7 @@ body {
 }
 
 #playPauseIcon {
-    /* Raha te hanova loko sary mainty ho manga ianao dia azonao ampiasaina ny filter */
-    /* filter: sepia(100%) hue-rotate(150deg) saturate(400%); */
+    filter: sepia(100%) hue-rotate(150deg) saturate(400%);
 }
 
 .title-container {
