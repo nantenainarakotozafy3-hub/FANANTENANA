@@ -109,6 +109,8 @@ body {
     justify-content: center;
     align-items: center;
     transition: transform 0.1s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .btn-icon:active {
