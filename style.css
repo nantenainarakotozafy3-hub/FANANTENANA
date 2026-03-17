@@ -93,32 +93,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 35px;
+    margin: 15px 0;
 }
 
 .btn-icon {
-    background: #f0f0f0;
+    background: transparent;
     border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-    transition: all 0.2s ease;
+    transition: transform 0.1s ease-in-out;
 }
 
 .btn-icon:active {
-    transform: scale(0.9);
-    background-color: #e0e0e0;
+    transform: scale(0.8);
+    opacity: 0.5;
 }
 
 .btn-icon img {
-    width: 30px;
-    height: 30px;
+    width: 65px;
+    height: 65px;
     object-fit: contain;
 }
 
