@@ -98,6 +98,8 @@ body {
 }
 
 .btn-icon {
+    overflow: hidden;
+    border-radius: 50%;
     background: transparent;
     border: none;
     padding: 0;
@@ -117,7 +119,10 @@ body {
 .btn-icon img {
     width: 65px;
     height: 65px;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: transparent;
+    display: block;
 }
 
 .title-container {
