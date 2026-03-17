@@ -2,7 +2,7 @@
 <html lang="mg">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAMPANA FANANTENANA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
@@ -26,30 +26,33 @@
     <div id="songPage" style="display:none;">
         <header class="fixed-header">
             <div class="header-controls-row">
-                <img src="back-icon.png" onclick="goBack()" class="back-icon" alt="Miverina">
+                <img src="home.png" class="back-icon" onclick="goBack()" alt="Back">
 
-            <div class="mini-player">
-                <audio id="audioPlayer"></audio>
-            <button onclick="togglePlay()" class="btn-icon">
-                <img id="playPauseIcon" src="play.png" alt="Play">
-            </button>
-            <button onclick="stopAudio()" class="btn-icon">
-                <img src="stop.png" alt="Stop">
-            </button>
-            </div>
-        
-             <div style="width: 55px;"></div>
+                <div class="player-container">
+                    <input type="range" id="songProgressBar" value="0" step="1">
+                    
+                    <div class="mini-player">
+                        <button class="btn-icon" onclick="togglePlay()">
+                            <img id="playPauseIcon" src="play.png" alt="Play">
+                        </button>
+                        <button class="btn-icon" onclick="stopAudio()">
+                            <img src="stop.png" alt="Stop">
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="title-container">
-                <h2 id="songTitle" class="header-title"></h2>
+                <h2 id="songTitle" class="header-title">Hira</h2>
             </div>
         </header>
 
         <article class="lyrics-container">
-        <div id="lyrics" style="text-align: center; font-size: 20px; line-height: 1.8;"></div>
+            <div id="lyrics"></div>
         </article>
     </div>
+
+    <audio id="audioPlayer"></audio>
 
     <script src="script.js"></script>
 </body>
