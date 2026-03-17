@@ -1,10 +1,12 @@
 let songs = [];
+const player = document.getElementById("audioPlayer");
+const progressBar = document.getElementById("songProgressBar");
+const icon = document.getElementById("playPauseIcon");
 
 fetch("lyrics.json")
   .then(response => response.json())
   .then(data => {
     songs = data.songs;
-
     songs.sort((a, b) => a.title.localeCompare(b.title));
     displaySongs(songs);
   })
@@ -13,14 +15,10 @@ fetch("lyrics.json")
 function displaySongs(list) {
   const songList = document.getElementById("songList");
   songList.innerHTML = "";
-
   list.forEach((song) => {
     const li = document.createElement("li");
     li.className = "song-item";
-    li.innerHTML = `
-    <span class="music-emoji">🎵</span>
-    <span class="song-name">${song.title}</span>
-`;
+    li.innerHTML = `<span class="music-emoji">🎵</span><span class="song-name">${song.title}</span>`;
     li.onclick = () => openSong(song);
     songList.appendChild(li);
   });
@@ -32,9 +30,6 @@ function openSong(song) {
     document.getElementById("songTitle").textContent = song.title;
     document.getElementById("lyrics").innerText = song.lyrics.join("\n");
 
-    const player = document.getElementById("audioPlayer");
-    const icon = document.getElementById("playPauseIcon");
-
     if (song.audio) {
         player.src = "AUDIO/" + song.audio; 
         player.load();
@@ -43,19 +38,25 @@ function openSong(song) {
     }
     
     icon.src = "play.png";
+    progressBar.value = 0;
     window.scrollTo(0, 0);
 }
 
-function togglePlay() {
-    const player = document.getElementById("audioPlayer");
-    const icon = document.getElementById("playPauseIcon");
-
-    if (!player) {
-        alert("Tsy hita ny audioPlayer ao amin'ny HTML!");
-        return;
+player.addEventListener("timeupdate", () => {
+    if (player.duration) {
+        const progress = (player.currentTime / player.duration) * 100;
+        progressBar.value = progress;
     }
+});
 
+progressBar.addEventListener("input", () => {
+    if (player.duration) {
+        const seekTime = (progressBar.value / 100) * player.duration;
+        player.currentTime = seekTime;
+    }
+});
 
+function togglePlay() {
     if (!player.src || player.src.includes("undefined") || player.src === window.location.href) {
         alert("Mbola tsy nisy hira nampidirina!");
         return;
@@ -63,13 +64,8 @@ function togglePlay() {
 
     if (player.paused) {
         player.play()
-            .then(() => {
-                icon.src = "pause.png";
-                console.log("Mandeha ny hira...");
-            })
-            .catch(err => {
-                alert("Tsy afaka mandefa ny hira: " + err.message);
-            });
+            .then(() => { icon.src = "pause.png"; })
+            .catch(err => { alert("Tsy afaka mandefa ny hira: " + err.message); });
     } else {
         player.pause();
         icon.src = "play.png";
@@ -77,23 +73,12 @@ function togglePlay() {
 }
 
 function stopAudio() {
-    const player = document.getElementById("audioPlayer");
-    const icon = document.getElementById("playPauseIcon");
-
     if (player) {
         player.pause();
         player.currentTime = 0;
-        icon.src = "play.png";
+        if (icon) icon.src = "play.png";
+        if (progressBar) progressBar.value = 0;
     }
-}
-
-function stopAudio() {
-    const player = document.getElementById("audioPlayer");
-    const icon = document.getElementById("playPauseIcon");
-
-    player.pause();
-    player.currentTime = 0;
-    icon.src = "play.png";
 }
 
 function goBack() {
@@ -104,9 +89,7 @@ function goBack() {
 
 document.getElementById("search").addEventListener("input", function() {
   const value = this.value.toLowerCase();
-  const filtered = songs.filter(song =>
-    song.title.toLowerCase().includes(value)
-  );
+  const filtered = songs.filter(song => song.title.toLowerCase().includes(value));
   displaySongs(filtered);
 });
 
