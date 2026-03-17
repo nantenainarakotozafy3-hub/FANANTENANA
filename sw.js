@@ -1,4 +1,4 @@
-const cacheName = 'hira-fanantenana-v40';
+const cacheName = 'hira-fanantenana-v42';
 const assets = [
   './',
   './index.html',
