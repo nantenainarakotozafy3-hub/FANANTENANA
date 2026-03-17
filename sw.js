@@ -6,6 +6,8 @@ const assets = [
   './script.js',
   './lyrics.json',
   './logo.png',
+  './play.png',
+  './pause.png',
   './back-icon.png',
   './manifest.json'
 ];
