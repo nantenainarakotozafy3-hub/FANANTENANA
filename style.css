@@ -120,10 +120,6 @@ body {
     object-fit: contain;
 }
 
-#playPauseIcon {
-    filter: sepia(100%) hue-rotate(150deg) saturate(400%);
-}
-
 .title-container {
     border: 2px solid #87CEEB;
     border-radius: 12px;
