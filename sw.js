@@ -9,6 +9,7 @@ const assets = [
   './play.png',
   './pause.png',
   './home.png',
+  './stop.png',
   './manifest.json'
 ];
 
