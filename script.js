@@ -29,9 +29,9 @@ function openSong(song) {
     document.getElementById("songPage").style.display = "block";
     document.getElementById("songTitle").textContent = song.title;
     document.getElementById("lyrics").innerText = song.lyrics.join("\n");
-    document.getElementById("currentTime").textContent = "0:00";
-    document.getElementById("durationTime").textContent = "0:00";
-}
+
+    if(document.getElementById("currentTime")) document.getElementById("currentTime").textContent = "0:00";
+    if(document.getElementById("durationTime")) document.getElementById("durationTime").textContent = "0:00";
 
     if (song.audio) {
         player.src = "AUDIO/" + song.audio; 
@@ -46,6 +46,7 @@ function openSong(song) {
 }
 
 function formatTime(seconds) {
+    if (isNaN(seconds)) return "0:00";
     let min = Math.floor(seconds / 60);
     let sec = Math.floor(seconds % 60);
     if (sec < 10) sec = "0" + sec;
@@ -57,9 +58,12 @@ player.addEventListener("timeupdate", () => {
         const progress = (player.currentTime / player.duration) * 100;
         progressBar.value = progress;
 
-        document.getElementById("currentTime").textContent = formatTime(player.currentTime);
-
-        document.getElementById("durationTime").textContent = formatTime(player.duration);
+        if(document.getElementById("currentTime")) {
+            document.getElementById("currentTime").textContent = formatTime(player.currentTime);
+        }
+        if(document.getElementById("durationTime")) {
+            document.getElementById("durationTime").textContent = formatTime(player.duration);
+        }
     }
 });
 
