@@ -1,4 +1,4 @@
-const cacheName = 'hira-fanantenana-v73';
+const cacheName = 'hira-fanantenana-v35';
 const assets = [
   './',
   './index.html',
@@ -6,11 +6,15 @@ const assets = [
   './script.js',
   './lyrics.json',
   './logo.png',
+  './show.png',
+  './hidden.png',
   './play.png',
   './pause.png',
   './home.png',
   './stop.png',
-  './manifest.json'
+  './logout.png',
+  './manifest.json',
+  './access.json'
 ];
 
 self.addEventListener('install', e => {
