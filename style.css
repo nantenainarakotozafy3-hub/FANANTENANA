@@ -79,6 +79,22 @@ body {
     min-height: 80px;
 }
 
+.btn-back {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    z-index: 1100;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
+}
+
 .back-icon {
     width: 45px;
     height: auto;
