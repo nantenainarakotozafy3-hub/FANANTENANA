@@ -178,6 +178,7 @@ body {
     margin-bottom: 8px;
     accent-color: #0097c2;
 }
+
 .btn-icon:active, .back-icon:active {
     transform: scale(0.85);
     transition: transform 0.2s ease;
@@ -208,4 +209,16 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.timer-display {
+    width: 85%;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #0097c2;
+    font-family: Arial, sans-serif;
+    margin-top: -5px;
+    margin-bottom: 10px;
 }
