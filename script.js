@@ -14,6 +14,8 @@ fetch("lyrics.json")
 
 function displaySongs(list) {
   const songList = document.getElementById("songList");
+  if (!songList) return;
+  
   songList.innerHTML = "";
   list.forEach((song) => {
     const li = document.createElement("li");
@@ -24,27 +26,6 @@ function displaySongs(list) {
   });
 }
 
-function openSong(song) {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("songPage").style.display = "block";
-    document.getElementById("songTitle").textContent = song.title;
-    document.getElementById("lyrics").innerText = song.lyrics.join("\n");
-
-    if(document.getElementById("currentTime")) document.getElementById("currentTime").textContent = "0:00";
-    if(document.getElementById("durationTime")) document.getElementById("durationTime").textContent = "0:00";
-
-    if (song.audio) {
-        player.src = "AUDIO/" + song.audio; 
-        player.load();
-    } else {
-        player.src = "";
-    }
-    
-    icon.src = "play.png";
-    progressBar.value = 0;
-    window.scrollTo(0, 0);
-}
-
 function formatTime(seconds) {
     if (isNaN(seconds)) return "0:00";
     let min = Math.floor(seconds / 60);
@@ -53,17 +34,38 @@ function formatTime(seconds) {
     return min + ":" + sec;
 }
 
+function openSong(song) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("songPage").style.display = "block";
+    document.getElementById("songTitle").textContent = song.title;
+    document.getElementById("lyrics").innerText = song.lyrics.join("\n");
+
+    const curTime = document.getElementById("currentTime");
+    const durTime = document.getElementById("durationTime");
+    if (curTime) curTime.textContent = "0:00";
+    if (durTime) durTime.textContent = "0:00";
+
+    if (song.audio) {
+        player.src = "AUDIO/" + song.audio; 
+        player.load();
+    } else {
+        player.src = "";
+    }
+    
+    if (icon) icon.src = "play.png";
+    if (progressBar) progressBar.value = 0;
+    window.scrollTo(0, 0);
+}
+
 player.addEventListener("timeupdate", () => {
     if (player.duration) {
         const progress = (player.currentTime / player.duration) * 100;
-        progressBar.value = progress;
+        if (progressBar) progressBar.value = progress;
 
-        if(document.getElementById("currentTime")) {
-            document.getElementById("currentTime").textContent = formatTime(player.currentTime);
-        }
-        if(document.getElementById("durationTime")) {
-            document.getElementById("durationTime").textContent = formatTime(player.duration);
-        }
+        const curTime = document.getElementById("currentTime");
+        const durTime = document.getElementById("durationTime");
+        if (curTime) curTime.textContent = formatTime(player.currentTime);
+        if (durTime) durTime.textContent = formatTime(player.duration);
     }
 });
 
@@ -75,11 +77,11 @@ function togglePlay() {
 
     if (player.paused) {
         player.play()
-            .then(() => { icon.src = "pause.png"; })
-            .catch(err => { alert("Tsy afaka mandefa ny feonkira: " + err.message); });
+            .then(() => { if (icon) icon.src = "pause.png"; })
+            .catch(err => { console.error("Error play:", err); });
     } else {
         player.pause();
-        icon.src = "play.png";
+        if (icon) icon.src = "play.png";
     }
 }
 
@@ -98,16 +100,11 @@ function goBack() {
     stopAudio();
 }
 
-document.getElementById("search").addEventListener("input", function() {
-  const value = this.value.toLowerCase();
-  const filtered = songs.filter(song => song.title.toLowerCase().includes(value));
-  displaySongs(filtered);
-});
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(() => console.log("Service Worker tafiditra!"))
-      .catch(err => console.log("Olana SW:", err));
-  });
+const searchEl = document.getElementById("search");
+if (searchEl) {
+    searchEl.addEventListener("input", function() {
+        const value = this.value.toLowerCase();
+        const filtered = songs.filter(song => song.title.toLowerCase().includes(value));
+        displaySongs(filtered);
+    });
 }
