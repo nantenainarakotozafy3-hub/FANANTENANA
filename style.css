@@ -85,6 +85,14 @@ body {
     position: absolute;
     left: 15px;
     z-index: 10;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.back-icon:active {
+    transform: scale(0.8);
+    opacity: 0.6;
 }
 
 .mini-player {
