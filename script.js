@@ -65,7 +65,7 @@ function togglePlay() {
     if (player.paused) {
         player.play()
             .then(() => { icon.src = "pause.png"; })
-            .catch(err => { alert("Tsy afaka mandefa ny hira: " + err.message); });
+            .catch(err => { alert("Tsy afaka mandefa ny feonkira: " + err.message); });
     } else {
         player.pause();
         icon.src = "play.png";
