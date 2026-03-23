@@ -13,8 +13,7 @@ body {
     justify-content: flex-start;
     height: 100vh;
     text-align: center;
-    padding: 0 20px;
-    padding-top: 40px;
+    padding: 40px 20px 0 20px;
 }
 
 .login-logo {
@@ -38,9 +37,11 @@ body {
 
 .password-wrapper {
     position: relative;
-    width: 80%;
+    width: 85%;
     max-width: 400px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
 }
 
 #memberCode {
@@ -51,6 +52,12 @@ body {
     box-sizing: border-box;
     font-size: 18px;
     outline: none;
+    text-align: left;
+}
+
+#memberCode::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 15px;
 }
 
 .eye-btn {
@@ -59,12 +66,16 @@ body {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
     z-index: 10;
+}
+
+.eye-btn img {
+    width: 25px;
+    opacity: 0.4;
 }
 
 .btn-login {
@@ -89,65 +100,6 @@ body {
     font-weight: bold;
 }
 
-.password-wrapper {
-    position: relative;
-    width: 85%;
-    max-width: 400px;
-    margin: 0 auto 20px auto;
-    display: flex;
-    align-items: center;
-}
-
-#memberCode::placeholder {
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 15px;
-    font-weight: normal;
-}
-
-#memberCode::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-#memberCode {
-    text-align: left;
-    padding-left: 15px;
-}
-
-.eye-btn {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    z-index: 10;
-    background: transparent !important;
-    border: none !important;
-    outline: none !important;
-}
-
-.eye-btn img {
-    width: 25px;
-    height: auto;
-    opacity: 0.4;
-}
-
-input::-ms-reveal,
-input::-ms-clear {
-    display: none !important;
-}
-
-input::-webkit-contacts-auto-fill-button,
-input::-webkit-credentials-auto-fill-button {
-    visibility: hidden;
-    display: none !important;
-    pointer-events: none;
-}
-
 .logo-container {
     display: flex;
     justify-content: center;
@@ -162,37 +114,15 @@ input::-webkit-credentials-auto-fill-button {
     height: auto;
 }
 
-.logout-home, .btn-icon img {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    object-fit: contain;
-    filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.25));
-}
-
-.back-icon {
-    border-radius: 0;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    object-fit: contain;
-    position: absolute;
-    left: 15px;
-    background-color: white;
-    filter: none;
-}
-
-.logout-home:active, .btn-icon:active, .back-icon:active {
-    transform: scale(0.9);
-    opacity: 0.8;
-}
-
 .logout-home {
     position: absolute;
     right: 25px;
     top: 25px;
     z-index: 1001;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .search-section {
@@ -235,13 +165,13 @@ input::-webkit-credentials-auto-fill-button {
     text-transform: uppercase;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: transform 0.1s ease;
 }
 
 #songList li:active {
     transform: scale(1.05);
     background-color: #00addf;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.1s ease-out;
 }
 
 .fixed-header {
@@ -255,7 +185,7 @@ input::-webkit-credentials-auto-fill-button {
 
 .header-controls-row {
     display: flex;
-    flex-direction: column; /* Ambony ny bokotra, ambany ny bar */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -270,32 +200,13 @@ input::-webkit-credentials-auto-fill-button {
 }
 
 .back-icon {
-    position: static !important; 
     width: 45px;
     height: 45px;
     cursor: pointer;
-}
-
-.progress-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.player-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    margin-top: -10px;
-}
-
-.mini-player {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
+    position: static !important;
+    border-radius: 0 !important;
+    filter: none !important;
+    box-shadow: none !important;
 }
 
 .btn-icon {
@@ -305,10 +216,33 @@ input::-webkit-credentials-auto-fill-button {
     cursor: pointer;
 }
 
+.btn-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: none !important;
+}
+
+.controls-group .btn-icon:last-child img {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.logout-home:active, .btn-icon:active, .back-icon:active {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+.progress-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #songProgressBar {
     width: 90%;
     max-width: 300px;
-    margin: 0;
     accent-color: #0097c2;
     cursor: pointer;
 }
@@ -353,10 +287,5 @@ input::-webkit-credentials-auto-fill-button {
 }
 
 #songPage {
-    animation: fadeInPage 0.4s ease-out;
-}
-
-@keyframes fadeInPage {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    animation: fadeInPage 0.4
 }
