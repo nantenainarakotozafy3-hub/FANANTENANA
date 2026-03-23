@@ -13,33 +13,26 @@
 </head>
 <body>
     
-    <div id="loginPage" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; font-family: sans-serif; background-color: #ffffff;">
-    
-        <img src="logo.png" style="width: 320px; max-width: 90%; margin-bottom: 40px;">
-        <h1 style="color: #0097c2; font-weight: bold; margin-bottom: 25px;">MIARAHABA ANAO</h1>
-        <p style="font-size: 18px; margin-bottom: 15px;">Ampiasao ny teny miafina ahafahanao miditra</p>
+    <div id="loginPage" class="login-container">
+        <img src="logo.png" class="login-logo" alt="Logo">
+        <h1>TONGASOA IANAO</h1>
+        <p>Ampiasao ny teny miafina ahafahanao miditra</p>
 
-        <div style="position: relative; width: 80%; max-width: 400px; margin-bottom: 20px;">
-            <input type="password" id="memberCode" placeholder="Soraty eto ny teny miafina..." 
-                style="padding: 15px 55px 15px 15px; border-radius: 12px; border: 2px solid #0097c2; width: 100%; box-sizing: border-box; text-align: left; font-size: 18px; outline: none;">
-            
-            <div onclick="toggleVisibility()" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; z-index: 10;">
-                <img id="eyeIcon" src="show.png" alt="Maso" style="width: 100%; height: auto; opacity: 0.6;">
+        <div class="password-wrapper">
+            <input type="password" id="memberCode" placeholder="Soraty eto ny teny miafina...">
+            <div onclick="toggleVisibility()" class="eye-btn">
+                <img id="eyeIcon" src="show.png" alt="Maso">
             </div>
         </div>
 
-        <button onclick="verifyCode()" style="padding: 12px 60px; background: #0097c2; color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 18px; cursor: pointer;">
-            HIDITRA
-        </button>
-        <p id="loginError" style="color: red; display: none; margin-top: 15px; font-weight: bold;">❌ Hamarino io teny miafina io!</p>
+        <button onclick="verifyCode()" class="btn-login">HIDITRA</button>
+        <p id="loginError" class="error-msg" style="display: none;">❌ Hamarino io teny miafina io!</p>
     </div>
 
     <div id="home" style="display:none;">
-        <header class="logo-container" style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center; padding: 50px 0 30px 0; min-height: 150px;">
-            <img src="logo.png" class="logo-home" alt="Logo Sampana" style="max-width: 280px; width: 90%; height: auto;">
-            <button onclick="logout()" style="position: absolute; right: 25px; top: 25px; background: transparent; border: none; cursor: pointer; padding: 10px; outline: none; -webkit-tap-highlight-color: transparent; z-index: 1001;">
-                <img src="logout.png" alt="Hivoaka" style="width: 65px; height: 65px; object-fit: contain; filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));">
-            </button>
+        <header class="logo-container">
+            <img src="logo.png" class="logo-home" alt="Logo Sampana">
+            <img src="logout.png" class="logout-home" onclick="logout()" alt="Hivoaka">
         </header>
 
         <section class="search-section">
@@ -51,27 +44,30 @@
         </main>
     </div>
 
-    <div id="songPage" style="display:none;">
+        <div id="songPage" style="display:none;">
         <header class="fixed-header">
             <div class="header-controls-row">
-                <img src="home.png" class="back-icon" onclick="goBack()" alt="Back">
+                <div class="controls-group">
+                    <img src="home.png" class="back-icon" onclick="goBack()" alt="Back">
+                    
+                    <button class="btn-icon" onclick="togglePlay()">
+                        <img id="playPauseIcon" src="play.png" alt="Play">
+                    </button>
+                    
+                    <button class="btn-icon" onclick="stopAudio()">
+                        <img src="stop.png" alt="Stop">
+                    </button>
+                </div>
 
-                <div class="player-container">
+                <div class="progress-section">
                     <input type="range" id="songProgressBar" value="0" step="1">
                     <div class="timer-display">
                         <span id="currentTime">0:00</span>
                         <span id="durationTime">0:00</span>
                     </div>
-                    <div class="mini-player">
-                        <button class="btn-icon" onclick="togglePlay()">
-                            <img id="playPauseIcon" src="play.png" alt="Play">
-                        </button>
-                        <button class="btn-icon" onclick="stopAudio()">
-                            <img src="stop.png" alt="Stop">
-                        </button>
-                    </div>
                 </div>
             </div>
+
             <div class="title-container">
                 <h2 id="songTitle" class="header-title">Hira</h2>
             </div>
