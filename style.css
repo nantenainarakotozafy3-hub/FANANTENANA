@@ -102,27 +102,39 @@ body {
 
 .logo-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 10px 0;
+    width: 100%;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.header-bottom-row {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    position: relative;
-    padding: 50px 0 30px 0;
-    min-height: 150px;
 }
 
 .logo-home {
-    max-width: 280px;
-    width: 90%;
+    max-width: 250px;
+    width: 80%;
     height: auto;
 }
 
 .logout-home {
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    z-index: 1001;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .search-section {
@@ -288,4 +300,36 @@ body {
 
 #songPage {
     animation: fadeInPage 0.4
+}
+
+.ticker-wrapper {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 2px solid #87CEEB;
+    border-radius: 8px;
+    margin-right: 15px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(135, 206, 235, 0.2);
+}
+
+.ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: blue;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
