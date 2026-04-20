@@ -101,11 +101,16 @@ function openSong(song) {
     if (curTime) curTime.textContent = "0:00";
     if (durTime) durTime.textContent = "0:00";
 
-    if (song.audio) {
-        player.src = "AUDIO/" + song.audio; 
-        player.load();
+    if (navigator.onLine) {
+        if (song.audio) {
+            player.src = "AUDIO/" + song.audio; 
+            player.load();
+        } else {
+            player.src = "";
+        }
     } else {
         player.src = "";
+        console.log("Offline: Tsy afaka mampiditra feonkira.");
     }
     
     if (icon) icon.src = "play.png";
@@ -143,6 +148,11 @@ if (progressBar) {
 }
 
 function togglePlay() {
+    if (!navigator.onLine) {
+        alert("Mila internet raha hihaino ny feonkira.");
+        return;
+    }
+
     if (!player.src || player.src.includes("undefined") || player.src === window.location.href) {
         alert("Mbola tsy nisy hira nampidirina!");
         return;
