@@ -35,8 +35,7 @@
         "",
         "Ref :",
         "Tsy mendrika aho, tsy mendrika ny fahasoavanao",
-        "Tsy mendrika aho, nafoinao ny fiandriananao",
-        "noho ny fitiavanao ahy",
+        "Tsy mendrika aho, nafoinao ny fiandriananao noho ny fitiavanao ahy",
         "Tsy mendrika aho, very tao anatin’ny otako aho",
         "Soa fa nisy ny hazofijaliana",
         "Namonjenao olom-bery toa ahy",
@@ -52,15 +51,11 @@
         "Tsy mendrika ny fahasoavanao",
         "Tsy mendrika ny famindram-ponao",
         "",
-        "",
         "Ka izao olomboavidy aho",
         "Ny fiainako manontolo itiavako Anao",
         "",
-        "",
         "Ka izao olomboavidy aho",
         "Te hiraiki-pitia Aminao aho",
-        "",
-        "",
         "",
         "Tsy hay refesina ny fitiavanao (x2)",
         "Feno fifaliana aho fa novonjenao",
@@ -714,7 +709,7 @@
         "Fa mendrika anao ny voninahitra",
         "Satria Mpanjakanay Ianao"
       ],
-      "audio": "Fa mendrika.MP3"
+      "audio": "Fa mendrika.mp3"
     },
     {
       "title": "MISAOTRA ANAO",
@@ -826,7 +821,7 @@
         "Tokin’ny fo izay tsy mba mandao",
         "Jeso"
       ],
-      "audio": "Jesoa no tokiko.mp3"
+      "audio": "Jeso no tokiko.mp3"
     },
     {
       "title": "MANIRY AHO",
@@ -991,7 +986,7 @@
         "Miverena izao ilaozy ny otanao ario ny ditranao",
         "Raisonao ny famonjena izay atolony ho anao"
       ],
-      "audio": "Miverena ianao.mp3"
+      "audio": "Miverena.mp3"
     },
     {
       "title": "AMPAHEREZO NY FOKO",
@@ -1141,6 +1136,90 @@
         "Ratsy io sigara io!"
       ],
       "audio": "Ratsy.mp3"
+    },
+    {
+      "title": "RAY MALALA O JEREO NY TANINDRAZANAY",
+      "lyrics": [
+        "Ray malala ô jereo ny tanindrazany",
+        "Fa fadiranovana mijaly izahay",
+        "Rakotry ny haratsiana, fahantrana, fahoriana",
+        "Lasa izany re no fiainanay ety",
+        "",
+        "Miangavy Aminao 'zahay ry Ray Tsitoha",
+        "Iantrao ny firenenay ka hamindrao fo",
+        "Fa Ianao irery ihany no afaka hamonjy anay",
+        "Mba hampody indray ilay maraina vaovao",
+        "",
+        "Ref:",
+        "Aza mahafoy na koa mandao ny Malagasy Ianao",
+        "Fa tsinjovy re ny Anaranao ry Ray Be famindram-po",
+        "Na maditra aza izahay, mafy loha indraindray",
+        "Dia miandrandra famonjena avy Aminao ry Ray",
+        "",
+        "",
+        "Ny ho avin'izao Madagasikara izao",
+        "Dia ankininay eo ampelatananao",
+        "Mba afaho fa mijaly, sitrano fa marary",
+        "Ka vahao 'reo fatorana izay mangeja anay",
+        "",
+        "",
+        "Aza mahafoy na koa mandao ny Malagasy Ianao",
+        "Fa tsinjovy re ny Anaranao ry Ray Be famindram-po",
+        "Na maditra aza izahay, mafy loha indraindray",
+        "Dia miandrandra famonjena avy Aminao ry Ray",
+        "",
+        "",
+        "Ny sofinao tsy mba lalodalovana",
+        "Fa fantatray mahare izao",
+        "Ouhh ouhh Ny Tananao",
+        "Ny Tananao izay tsy fohy hatsory re",
+        "Hamonjy ity Firenena ity",
+        "Mba ho tody soa ary",
+        "",
+        "Ampianaro mba hahay hanompo tsara Anao 'zahay",
+        "Dia ampio koa hanary ireo sampinay",
+        "Mba afaho fa mijaly, sitrano fa marary",
+        "Ray malala ô jereo ny Tanidrazanay"
+      ],
+      "audio": "Ray malala ô.mp3"
+    },
+    {
+      "title": "MITSAOKA ANAO",
+      "lyrics": [
+        "[SOLO x2]",
+        "Tompo ô mitsaoka Anao",
+        "Miondrika manaja Anao (ouh ouh ouh ouh)",
+        "Ireto mpanomponao",
+        "Fa vonona handray Anao",
+        "Mandrakizay",
+        "",
+        "",
+        "Ref:",
+        "Mpanjaka Mpanjaka Mpanjaka",
+        "Mpanjakan'ny Mpanjaka",
+        "Mpanjaka Mpanjaka",
+        "Ka mendrika ho deraina, deraina, deraina",
+        "Ary hankalazaina",
+        "",
+        "",
+        "Tompo ô mitsaoka Anao",
+        "Miondrika manaja Anao (ouh ouh ouh ouh)",
+        "Ireto mpanomponao",
+        "Fa vonona handray Anao",
+        "Mandrakizay",
+        "",
+        "",
+        "Indreto izahay (Indreto izahay)",
+        "Miondrika manaja Anao (A-a-Anao ouh ouh)",
+        "Fa mendrika ho deraina ry (Mpanjakanay)",
+        "Ka raiso re ny haja (Ho Anao)",
+        "Sy voninahitra (Hatrany)",
+        "",
+        "Fa mendrika ho deraina",
+        "Sy hankalazaina",
+        "Ny Anaranao"
+      ],
+      "audio": "Mitsaoka Anao.mp3"
     }
   ]
 }
